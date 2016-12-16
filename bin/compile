@@ -66,5 +66,5 @@ $extract $CACHE_DIR/$LOGSTASH_PACKAGE
 
 echo "Exporting PATH" | indent
 echo 'export PATH="$PATH:'${LOGSTASH_DIR##*/}'/bin"' > $INIT_SCRIPT
-${LOGSTASH_DIR##*/}'/bin/logstash-plugin install logstash-aggregate-plugin
-${LOGSTASH_DIR##*/}'/bin/logstash-plugin install logstash-filter-useragent
+$LOGSTASH_DIR/bin/logstash-plugin install logstash-aggregate-plugin
+$LOGSTASH_DIR/bin/logstash-plugin install logstash-filter-useragent
